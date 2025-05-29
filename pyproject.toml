@@ -11,7 +11,8 @@ dependencies = [
     "typer (>=0.16.0,<0.17.0)",
     "pypdf2 (>=3.0.1,<4.0.0)",
     "pycryptodome (>=3.23.0,<4.0.0)",
-    "pytest (>=8.3.5,<9.0.0)"
+    "pytest (>=8.3.5,<9.0.0)",
+    "tk"
 ]
 
 [tool.poetry]

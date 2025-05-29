@@ -1,6 +1,6 @@
 [project]
 name = "pdf-password-remover"
-version = "0.1.0"
+version = "0.2.0"
 description = "A Python based CLI tool to remove passwords from PDF files."
 authors = [
     {name = "Ronald Erosa",email = "thecasualdev@gmail.com"}

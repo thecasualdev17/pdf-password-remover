@@ -17,4 +17,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Interactive prompts for missing arguments
 - MIT License, README, and project documentation
 
+## [0.2.0] - 2025-06-01
+### Added
+- Improved error handling in PDF password removal
+- Output directory creation and validation
+- Support for batch processing with custom output directory
+- Updated dependencies in `pyproject.toml`
+
 ---

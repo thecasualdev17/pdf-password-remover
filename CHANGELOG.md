@@ -24,4 +24,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support for batch processing with custom output directory
 - Updated dependencies in `pyproject.toml`
 
+## [0.3.0] - 2025-05-30
+### Added
+- Added support for tkinterdnd2 for enhanced file/directory picker with drag-and-drop (macOS compatibility improvements)
+- Fallback to manual input if tkinterdnd2 and Tkinter are unavailable
+- Added `tkinterdnd2` and `tk` to dependencies in `pyproject.toml`
+- Improved `pick_path` function to use tkinterdnd2 if available, otherwise fallback to Tkinter or manual input
+
 ---

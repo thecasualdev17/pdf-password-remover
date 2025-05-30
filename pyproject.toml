@@ -1,6 +1,6 @@
 [project]
 name = "pdf-password-remover"
-version = "0.2.0"
+version = "0.3.0"
 description = "A Python based CLI tool to remove passwords from PDF files."
 authors = [
     {name = "Ronald Erosa",email = "thecasualdev@gmail.com"}
@@ -12,6 +12,7 @@ dependencies = [
     "pypdf2 (>=3.0.1,<4.0.0)",
     "pycryptodome (>=3.23.0,<4.0.0)",
     "pytest (>=8.3.5,<9.0.0)",
+    "tkinterdnd2 (>=0.3.0,<0.4.0)",
     "tk"
 ]
 

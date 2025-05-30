@@ -9,15 +9,31 @@ from pdf_password_remover.utils import pdf_utils
 
 # Add Tkinter for file/directory picker
 def pick_path():
+    try:
+        from tkinterdnd2 import TkinterDnD, DND_FILES
+        import tkinter as tk
+        from tkinter import filedialog
+        use_tkdnd = True
+    except ImportError:
+        use_tkdnd = False
+        try:
+            import tkinter as tk
+            from tkinter import filedialog
+        except ImportError:
+            tk = None
+            filedialog = None
+
     while True:
         use_picker = typer.prompt("Would you like to use a file/directory picker dialog? (y = yes, n = manual input)", default="y", show_default=False)
-        if use_picker.lower() == "n":
+        if use_picker.lower() == "n" or not (tk and filedialog):
             return typer.prompt("Enter the path to the password-protected PDF file or directory")
         else:
-
             picker_type = typer.prompt("Would you like to select a file or a directory? (f = file, d = directory)", default="f", show_default=False)
             typer.echo("Please choose a file or directory in the dialog.")
-            root = tk.Tk()
+            if use_tkdnd:
+                root = TkinterDnD.Tk()
+            else:
+                root = tk.Tk()
             root.withdraw()
             if picker_type.lower() == "d":
                 path = filedialog.askdirectory(title="Select a directory containing PDF files", parent=root)
